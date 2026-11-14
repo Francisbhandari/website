@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A UX design project by Francis Bhandari.">
+  <title>Design 1 — UX Portfolio — Francis Bhandari</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #202124;
+      background: #faf9f6;
+    }
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; padding: 0 1.5rem; }
+    .site-header {
+      width: min(100%, 56rem); margin: 0 auto; padding: 1.5rem 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+      border-bottom: 1px solid #e8e6e1;
+    }
+    a { color: inherit; text-underline-offset: 0.25em; }
+    .site-name { font-size: 0.95rem; font-weight: 600; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+    nav a { color: #555; font-size: 0.9rem; text-decoration: none; }
+    nav a:hover, nav a:focus-visible { color: #202124; text-decoration: underline; }
+    main { width: min(100%, 46rem); margin: 0 auto; padding: 5rem 0; }
+    .eyebrow { margin: 0 0 1rem; color: #727272; font-size: 0.9rem; }
+    h1 { margin: 0; font-size: clamp(2.5rem, 8vw, 4rem); letter-spacing: -0.07em; line-height: 1; }
+    .intro { margin: 1.5rem 0 3rem; color: #555; font-size: 1.05rem; line-height: 1.7; }
+    .placeholder {
+      min-height: 15rem; display: grid; place-items: center; padding: 2rem;
+      border: 1px dashed #c9c6bf; color: #727272; text-align: center;
+    }
+    .back-link { display: inline-block; margin-top: 2rem; }
+    @media (max-width: 480px) {
+      body { padding: 0 1rem; }
+      .site-header { align-items: flex-start; flex-direction: column; gap: 1rem; }
+      main { padding: 3.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="/">Francis Bhandari</a>
+    <nav aria-label="Main navigation">
+      <a href="/#about">About</a>
+      <a href="/ux-portfolio/" aria-current="page">UX Portfolio</a>
+    </nav>
+  </header>
+  <main>
+    <p class="eyebrow"><a href="/ux-portfolio/">UX Portfolio</a> / Project</p>
+    <h1>Design 1</h1>
+    <p class="intro">Project overview coming soon.</p>
+    <div class="placeholder">Add project images to <code>images/ux-portfolio/design1/</code> and update this page to display them.</div>
+    <a class="back-link" href="/ux-portfolio/">← Back to UX Portfolio</a>
+  </main>
+</body>
+</html>

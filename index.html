@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A simple, minimal personal website.">
+  <meta name="description" content="Francis Bhandari's portfolio and UX design work.">
   <title>Francis Bhandari</title>
   <style>
     :root {
@@ -14,18 +14,59 @@
     }
 
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       min-height: 100vh;
       margin: 0;
-      display: grid;
-      place-items: center;
-      padding: 2rem;
+      padding: 0 1.5rem;
     }
 
-    main { width: min(100%, 38rem); }
+    .site-header {
+      width: min(100%, 56rem);
+      margin: 0 auto;
+      padding: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      border-bottom: 1px solid #e8e6e1;
+    }
 
-    p {
+    .site-name {
+      color: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+
+    nav a {
+      color: #555;
+      font-size: 0.9rem;
+      text-decoration: none;
+      text-underline-offset: 0.25em;
+    }
+
+    nav a:hover, nav a:focus-visible {
+      color: #202124;
+      text-decoration: underline;
+    }
+
+    main { width: min(100%, 38rem); margin: 0 auto; }
+
+    #home {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    section { padding: 5rem 0; scroll-margin-top: 1rem; }
+    .section-divider { border-top: 1px solid #e8e6e1; }
+
+    .eyebrow {
       margin: 0 0 1rem;
       color: #727272;
       font-size: 0.9rem;
@@ -39,29 +80,49 @@
       line-height: 1;
     }
 
-    .intro {
+    h2 {
+      margin: 0 0 1rem;
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+      letter-spacing: -0.04em;
+    }
+
+    .intro, .section-copy {
       max-width: 29rem;
-      margin-top: 1.5rem;
+      margin: 1.5rem 0 0;
       color: #555;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.7;
     }
 
-    a {
-      display: inline-block;
-      margin-top: 1.5rem;
-      color: inherit;
-      text-underline-offset: 0.25em;
-    }
+    .section-copy { margin-top: 0; }
 
-    a:hover { color: #666; }
+    @media (max-width: 480px) {
+      body { padding: 0 1rem; }
+      .site-header { align-items: flex-start; flex-direction: column; gap: 1rem; }
+      section { padding: 3.5rem 0; }
+    }
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <a class="site-name" href="/">Francis Bhandari</a>
+    <nav aria-label="Main navigation">
+      <a href="/#about">About</a>
+      <a href="/ux-portfolio/">UX Portfolio</a>
+    </nav>
+  </header>
+
   <main>
-    <p>Hello, I'm</p>
-    <h1>Francis Bhandari.</h1>
-    <p class="intro">Welcome to my little corner of the internet. I'm keeping things simple while I build and explore.</p>
+    <section id="home" aria-labelledby="home-title">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1 id="home-title">Francis Bhandari.</h1>
+      <p class="intro">Welcome to my little corner of the internet. I'm keeping things simple while I build and explore.</p>
+    </section>
+
+    <section id="about" class="section-divider" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p class="section-copy">More about me coming soon.</p>
+    </section>
   </main>
 </body>
 </html>
