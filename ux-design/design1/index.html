@@ -38,7 +38,7 @@
       }
 
       .site-name {
-        font-size: 0.95rem;
+        font-size: 1rem;
         font-weight: 600;
         text-decoration: none;
       }
@@ -46,13 +46,20 @@
       nav {
         display: flex;
         flex-wrap: wrap;
-        gap: 1.25rem;
+        gap: clamp(1.5rem, 3vw, 2.5rem);
       }
 
       nav a {
-        color: #555;
-        font-size: 0.9rem;
+        color: #444;
+        font-size: 1rem;
+        line-height: 1.5;
         text-decoration: none;
+        transition: color 160ms ease;
+      }
+
+      nav a[aria-current="page"] {
+        color: #202124;
+        font-weight: 600;
       }
 
       nav a:hover,
@@ -114,7 +121,7 @@
           padding: 1.5rem 1rem;
         }
 
-        nav { gap: 1rem; }
+        nav { gap: 1.25rem; }
         main { padding: 3.5rem 0; }
       }
     </style>
